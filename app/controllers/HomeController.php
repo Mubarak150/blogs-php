@@ -1,11 +1,33 @@
 <?php 
 
 class HomeController {
+    private $pdo;
+
+    public function __construct() {
+        global $pdo; // Access PDO from config/db.php
+        $this->pdo = $pdo;
+    }
+
     public function index() {
-        $data = ['title' => 'Welcome to User Blog', 
+
+
+        $request = new Blog($this->pdo);
+        $response = $request->getAll(); 
+
+        if ($response['success']) {
+            $posts = $response['data']; 
+            $data = ['title' => 'Welcome to User Blog',  "posts" =>$posts];
+            $this->render('home', $data);
+            exit;
+        } else {
+            $data = ['title' => 'ERR Create Your Blog'];
+            $this->render('index', $data);
+        }
+
+        // $data = ['title' => 'Welcome to User Blog', 
                  
-                ];
-        $this->render('home', $data);
+        //         ];
+        // $this->render('home', $data);
     }
 
    

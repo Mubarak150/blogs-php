@@ -9,6 +9,12 @@ class BlogController {
     }
 
     public function index() {
+
+        $user_id = $_SESSION['user_id']; 
+        if(!isset($user_id)){ // is user logged in?? 
+            header('Location: /blogs/?page=user/login');
+        }
+
         $request = new Blog($this->pdo);
         $response = $request->getAll(); 
 

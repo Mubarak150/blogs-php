@@ -59,7 +59,7 @@ class Blog {
     }
 
     public function getAll() {
-        $stmt = $this->pdo->prepare("SELECT posts.*, users.name AS user_name
+        $stmt = $this->pdo->prepare("SELECT posts.*, users.name AS user_name, users.profile_image AS user_profile_image
                                      FROM posts
                                      LEFT JOIN users ON posts.user_id = users.id;
                                   ");

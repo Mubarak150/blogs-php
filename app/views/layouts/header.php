@@ -1,9 +1,9 @@
 <header class="absolute inset-x-0 top-0 z-50">
     <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
     <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
+        <a href="/blogs/" class="-m-1.5 p-1.5">
         <span class="sr-only">Your Company</span>
-        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="" class="h-8 w-auto" />
+        <img src="./public//uploads/letter-b.webp" alt="" class="h-12 w-auto rounded-[99.9%]" />
         </a>
     </div>
     <div class="flex lg:hidden">
@@ -15,9 +15,8 @@
         </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-        <a href="/" class="text-sm/6 font-semibold text-gray-900">Home</a>
-        <a href="#" class="text-sm/6 font-semibold text-gray-900">About</a>
-        <a href="/blogs/?page=blogs" class="text-sm/6 font-semibold text-gray-900">Blog</a>
+        <a href="/blogs/" class="text-sm/6 font-semibold text-gray-900">Home</a>
+        <a href="/blogs/?page=blog" class="text-sm/6 font-semibold text-gray-900">Blog</a>
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <?php if(!isset($_SESSION['user_id'])){ ?>
