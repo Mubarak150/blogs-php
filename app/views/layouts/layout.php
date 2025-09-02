@@ -10,7 +10,7 @@
     <!-- hero starts -->
         <div class="bg-white">
             <?php
-                if(!($_SERVER['REQUEST_URI'] === '/blogs/?page=user/login' || $_SERVER['REQUEST_URI'] === '/blogs/?page=user/login')) {
+                if(!($_SERVER['REQUEST_URI'] === '/blogs/?page=user/login' || $_SERVER['REQUEST_URI'] === '/blogs/?page=user/signup')) {
                     require_once './app/views/layouts/header.php'; 
                 }
             ?>
